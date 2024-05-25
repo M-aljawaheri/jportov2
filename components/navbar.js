@@ -27,8 +27,8 @@ const LinkItem = ({ href, path, target, children, ...props }) => {
       href={href}
       scroll={false}
       p={2}
-      bg={active ? 'grassTeal' : undefined}
-      color={active ? '#202023' : inactiveColor}
+      bg={active ? 'teal.300' : undefined}
+      color={active ? 'gray.800' : inactiveColor}
       target={target}
       {...props}
     >
@@ -105,7 +105,7 @@ const NavBar = props => {
                   Works
                 </MenuItem>
 
-                <MenuItem as={MenuLink} href="/Posts">
+                <MenuItem as={MenuLink} href="/posts">
                   Posts
                 </MenuItem>
               </MenuList>

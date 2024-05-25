@@ -1,4 +1,7 @@
+import NextLink from 'next/link'
+import { ChevronRightIcon } from '@chakra-ui/icons'
 import {
+  Button,
   Container,
   Box,
   Heading,
@@ -7,6 +10,7 @@ import {
 } from '@chakra-ui/react'
 import Section from '../components/section'
 import Paragraph from '../components/paragraph'
+import { BioSection, BioYear } from '../components/bio'
 
 const Page = () => {
   return (
@@ -59,6 +63,42 @@ const Page = () => {
           University. I have worked in the Qatar and Pittsburgh campuses. I have
           a passion for all things systems: Operating systems, Database systems,
           Compiler development and Computer Graphics
+        </Paragraph>
+
+        <Box align="center" my={4}>
+          <NextLink href="/works">
+            <Button rightIcon={<ChevronRightIcon />} colorScheme="teal">
+              My Portfolio
+            </Button>
+          </NextLink>
+        </Box>
+      </Section>
+
+      <Section delay={0.2}>
+        <Heading as="h3" variant="section-title">
+          Bio
+        </Heading>
+        <BioSection>
+          <BioYear>2002</BioYear>
+          Born in Doha, Qatar.
+        </BioSection>
+        <BioSection>
+          <BioYear>2023</BioYear>
+          Graduated from Carnegiemellon University with a Bsc in Computer
+          Science & a Concentration in Computer Systems
+        </BioSection>
+        <BioSection>
+          <BioYear>2024</BioYear>
+          Intern @ Openstack working alongside Nvidia & Redhat developers
+        </BioSection>
+      </Section>
+
+      <Section delay={0.3}>
+        <Heading as="h3" variant="section-title">
+          I ❤️
+        </Heading>
+        <Paragraph>
+          I love playing amateur & watching professional tennis. Love food,
         </Paragraph>
       </Section>
     </Container>
