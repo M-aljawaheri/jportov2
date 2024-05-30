@@ -5,6 +5,9 @@ import Head from 'next/head'
 import Date from '../../components/date'
 import { getGlobalLightStyle } from '../../lib/theme'
 import { getGlobalDarkStyle } from '../../lib/theme'
+import ReactMarkdown from 'react-markdown'
+import remarkGfm from 'remark-gfm'
+import MarkdownComponents from '../../lib/image-markdown-util'
 
 const MotionBox = motion(Box)
 
@@ -35,11 +38,13 @@ export default function Post({ postData }) {
       <Heading as="h1" mb={6} fontSize="4xl">
         {postData.title}
       </Heading>
-      <Box
-        dangerouslySetInnerHTML={{ __html: postData.contentHtml }}
-        lineHeight="tall"
-        fontSize="lg"
-      />
+      <Box lineHeight="tall" fontSize="lg" />
+      <ReactMarkdown
+        remarkPlugins={[remarkGfm]}
+        components={MarkdownComponents}
+      >
+        {postData.contentHtml}
+      </ReactMarkdown>
     </MotionBox>
   )
 }
