@@ -7,30 +7,20 @@ import {
 } from '@chakra-ui/react'
 import { AnimatePresence } from 'framer-motion'
 import BlogPost from '../components/blog-post'
+import { getSortedPostsData } from '../lib/posts-util'
 
-const posts = [
-  {
-    title: 'The Library of Babel',
-    date: '2023-01-01',
-    href: '/posts/library-of-babel',
-  },
-  {
-    title: 'Working with Openstack',
-    date: '2023-01-02',
-    href: '/posts/openstack-opensource',
-  },
-  {
-    title: 'So I was name-dropped in the CMU operating systems class..',
-    date: '2023-01-02',
-    href: '/posts/openstack-opensource',
-  },
-  // Add more posts as needed
-]
+export async function getStaticProps() {
+  const allPostsData = getSortedPostsData()
+  return {
+    props: {
+      allPostsData,
+    },
+  }
+}
 
-const BlogPage = () => {
-  const { toggleColorMode } = useColorMode()
-  const pageBg = useColorModeValue('gray.50', 'gray.900')
-
+// why the hell does this prop passed must match name returned in getstaticprops, this
+// makes little sense. i'm probably misunderstanding
+const BlogPage = ({ allPostsData }) => {
   return (
     <Container maxW="container.md">
       <Heading as="h1" mb={6} textAlign="center">
@@ -43,12 +33,12 @@ const BlogPage = () => {
       </Box>
 
       <AnimatePresence>
-        {posts.map(post => (
+        {allPostsData.map(post => (
           <BlogPost
-            key={post.title}
+            key={post.id}
             title={post.title}
             date={post.date}
-            href={post.href}
+            href={`/posts/${post.id}`}
           />
         ))}
       </AnimatePresence>
