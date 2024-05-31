@@ -1,5 +1,12 @@
 import { getAllPostIds, getPostData } from '../../lib/posts-util'
-import { Box, Heading, Text, useColorModeValue } from '@chakra-ui/react'
+import {
+  Container,
+  Button,
+  Box,
+  Heading,
+  Text,
+  useColorModeValue,
+} from '@chakra-ui/react'
 import { motion } from 'framer-motion'
 import Head from 'next/head'
 import Date from '../../components/date'
@@ -8,6 +15,8 @@ import { getGlobalDarkStyle } from '../../lib/theme'
 import ReactMarkdown from 'react-markdown'
 import remarkGfm from 'remark-gfm'
 import MarkdownComponents from '../../lib/image-markdown-util'
+import { ArrowLeftIcon } from '@chakra-ui/icons'
+import NextLink from 'next/link'
 
 const MotionBox = motion(Box)
 
@@ -17,35 +26,41 @@ export default function Post({ postData }) {
   const dateColor = useColorModeValue('gray.600', 'gray.400')
 
   return (
-    <MotionBox
-      bg={bgColor}
-      color={color}
-      p={8}
-      borderRadius="md"
-      maxW="container.md"
-      mx="auto"
-      mt={10}
-      initial={{ opacity: 0, y: 20 }}
-      animate={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.5 }}
-    >
-      <Head>
-        <title>{postData.title}</title>
-      </Head>
-      <Text fontSize="sm" color={dateColor} mb={4}>
-        <Date dateString={postData.date} />
-      </Text>
-      <Heading as="h1" mb={6} fontSize="4xl">
-        {postData.title}
-      </Heading>
-      <Box lineHeight="tall" fontSize="lg" />
-      <ReactMarkdown
-        remarkPlugins={[remarkGfm]}
-        components={MarkdownComponents}
+    <Container maxW="container.sm">
+      <Box align="left" my={2}>
+        <NextLink href="/posts">
+          <Button rightIcon={<ArrowLeftIcon />} colorScheme="teal"></Button>
+        </NextLink>
+      </Box>
+      <MotionBox
+        bg={bgColor}
+        color={color}
+        //        p={8}
+        borderRadius="md"
+        mx="auto"
+        mt={10}
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.5 }}
       >
-        {postData.contentHtml}
-      </ReactMarkdown>
-    </MotionBox>
+        <Head>
+          <title>{postData.title}</title>
+        </Head>
+        <Text fontSize="sm" color={dateColor} mb={4}>
+          <Date dateString={postData.date} />
+        </Text>
+        <Heading as="h1" mb={6} fontSize="4xl">
+          {postData.title}
+        </Heading>
+        <Box lineHeight="tall" fontSize="lg" />
+        <ReactMarkdown
+          remarkPlugins={[remarkGfm]}
+          components={MarkdownComponents}
+        >
+          {postData.contentHtml}
+        </ReactMarkdown>
+      </MotionBox>
+    </Container>
   )
 }
 

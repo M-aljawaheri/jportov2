@@ -15,6 +15,8 @@ const BlogPost = ({ title, date, href }) => {
   const boxBorderColor = useColorModeValue('gray.400', undefined) // default is nice for dark mode
   const linkTextColor = useColorModeValue('', 'orchid')
 
+  const hoverBg = useColorModeValue('teal.300', 'gray.600')
+
   return (
     <ChakraLink
       as={NextLink}
@@ -23,6 +25,12 @@ const BlogPost = ({ title, date, href }) => {
       _hover={{ textDecoration: 'none' }}
     >
       <MotionBox
+        sx={{
+          transition: 'background-color 0.3s ease',
+          '&:hover': {
+            backgroundColor: hoverBg,
+          },
+        }}
         whileHover={{ scale: 1.05 }}
         p={4}
         borderWidth={1}

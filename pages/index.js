@@ -62,7 +62,8 @@ const Page = () => {
           I am a freelancer, Teaching Assistant and researcher @ Carnegiemellon
           University. I have worked in the Qatar and Pittsburgh campuses. I have
           a passion for all things systems: Operating systems, Database systems,
-          Compiler development and Computer Graphics
+          Compiler development and Distributed systems with a special affinity
+          for opensource software.
         </Paragraph>
 
         <Box align="center" my={4}>

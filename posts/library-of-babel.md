@@ -5,6 +5,8 @@ date: '2024-01-01'
 
 ![Library of babel](/images/digital_library_of_babel.png)
 
+&nbsp;   
+
 # Have you ever heard of the Library of Babel.
 
 The **Library of Babel** is a (_fictional_) infinite library that consists of hexagonal adjacent rooms. Each room consists of books, in seemingly random order that make up all possible orderings of english characters, the period comma and space (TODO: cite wikipedia).  
