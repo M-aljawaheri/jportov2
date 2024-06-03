@@ -87,6 +87,7 @@ const NavBar = props => {
 
         {/* Mobile devices navbar */}
         <Box flex={1} align="right">
+          {/* TODO: align this button with what's under it */}
           <ThemeTogglebutton />
           <Box ml={2} display={{ base: 'inline-block', md: 'none' }}>
             <Menu>

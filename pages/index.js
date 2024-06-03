@@ -14,12 +14,13 @@ import { BioSection, BioYear } from '../components/bio'
 
 const Page = () => {
   return (
-    <Container>
+    <Box>
       <Box
         borderRadius="lg"
         bg={useColorModeValue('whiteAlpha.500', 'whiteAlpha.200')}
         p={3}
         mb={6}
+        w="100%"
         align="center"
       >
         Hello, I'm a full-stack & systems developer based in Qatar.
@@ -27,7 +28,7 @@ const Page = () => {
 
       <Box display={{ md: 'flex' }}>
         <Box flexGrow={1}>
-          <Heading as="h2" variant="page-title">
+          <Heading as="h2" variant="page-title" minW={{ base: 'md' }}>
             Mohammed Al-Jawaheri
           </Heading>
 
@@ -102,7 +103,7 @@ const Page = () => {
           I love playing amateur & watching professional tennis. Love food,
         </Paragraph>
       </Section>
-    </Container>
+    </Box>
   )
 }
 

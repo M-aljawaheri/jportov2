@@ -44,7 +44,11 @@ const WorksPage = ({ allPostsData }) => {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5 }}
               >
-                <WorkItem title={post.works_title} href={`/posts/${post.id}`} />
+                <WorkItem
+                  title={post.works_title}
+                  imgSrc={`/images/works/${post.id}.jpeg`}
+                  href={`/posts/${post.id}`}
+                />
               </MotionBox>
             ))}
         </AnimatePresence>
