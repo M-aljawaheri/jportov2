@@ -3,16 +3,28 @@ import { ChevronRightIcon } from '@chakra-ui/icons'
 import {
   Button,
   Container,
+  Stack,
   Box,
   Heading,
   Image,
   useColorModeValue,
+  IconButton,
 } from '@chakra-ui/react'
 import Section from '../components/section'
 import Paragraph from '../components/paragraph'
 import { BioSection, BioYear } from '../components/bio'
+import { LINKEDIN_URL, GITHUB_URL, RESUME_PDF } from '../constants'
+import {
+  AiFillTwitterCircle,
+  AiFillLinkedin,
+  AiFillYoutube,
+  AiFillGithub,
+} from 'react-icons/ai'
 
 const Page = () => {
+  const iconHoverColor = useColorModeValue('teal.500', 'teal.300')
+  const iconTransition = 'all 0.3s ease'
+
   return (
     <Box>
       <Box
@@ -66,12 +78,35 @@ const Page = () => {
           Compiler development and Distributed systems with a special affinity
           for opensource software.
         </Paragraph>
+        <Box
+          display="flex"
+          justifyContent="center"
+          alignItems="center"
+          gap={4}
+          py={3}
+        >
+          <NextLink href={LINKEDIN_URL} isExternal>
+            <Box
+              as={AiFillLinkedin}
+              size="40px"
+              _hover={{ color: iconHoverColor, transform: 'scale(1.1)' }}
+              transition={iconTransition}
+            />
+          </NextLink>
 
-        <Box align="center" my={4}>
-          <NextLink href="/works">
+          <NextLink href={RESUME_PDF} passHref>
             <Button rightIcon={<ChevronRightIcon />} colorScheme="teal">
-              My Portfolio
+              My Resume
             </Button>
+          </NextLink>
+
+          <NextLink href={GITHUB_URL} isExternal>
+            <Box
+              as={AiFillGithub}
+              size="40px"
+              _hover={{ color: iconHoverColor, transform: 'scale(1.1)' }}
+              transition={iconTransition}
+            />
           </NextLink>
         </Box>
       </Section>
