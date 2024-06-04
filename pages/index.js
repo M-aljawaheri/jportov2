@@ -2,24 +2,18 @@ import NextLink from 'next/link'
 import { ChevronRightIcon } from '@chakra-ui/icons'
 import {
   Button,
-  Container,
-  Stack,
   Box,
   Heading,
   Image,
   useColorModeValue,
-  IconButton,
+  Link,
+  Text,
 } from '@chakra-ui/react'
 import Section from '../components/section'
 import Paragraph from '../components/paragraph'
 import { BioSection, BioYear } from '../components/bio'
 import { LINKEDIN_URL, GITHUB_URL, RESUME_PDF } from '../constants'
-import {
-  AiFillTwitterCircle,
-  AiFillLinkedin,
-  AiFillYoutube,
-  AiFillGithub,
-} from 'react-icons/ai'
+import { AiFillLinkedin, AiFillGithub } from 'react-icons/ai'
 
 const Page = () => {
   const iconHoverColor = useColorModeValue('teal.500', 'teal.300')
@@ -46,6 +40,10 @@ const Page = () => {
 
           <p> Digital scholar ( Developer, Academic, Hobbyist ) </p>
           <p> Teaching Assistant @ CMU-Q </p>
+          <Text fontSize="xs" as="i">
+            {' '}
+            mjawaheri02 &lt;AT&gt; gmail &lt;DOT&gt; com{' '}
+          </Text>
         </Box>
 
         <Box
@@ -72,11 +70,14 @@ const Page = () => {
           Work
         </Heading>
         <Paragraph>
-          I am a freelancer, Teaching Assistant and researcher @ Carnegiemellon
-          University. I have worked in the Qatar and Pittsburgh campuses. I have
-          a passion for all things systems: Operating systems, Database systems,
-          Compiler development and Distributed systems with a special affinity
-          for opensource software.
+          I am a freelancer, Teaching Assistant and researcher @Carnegiemellon
+          University. I have a passion for all things systems: Operating
+          systems, Database systems, Compiler development and Distributed
+          systems with a special affinity for{' '}
+          <Link as={NextLink} href="/posts/creating-opensource-culture">
+            open-source software
+          </Link>
+          .
         </Paragraph>
         <Box
           display="flex"
@@ -116,17 +117,22 @@ const Page = () => {
           Bio
         </Heading>
         <BioSection>
-          <BioYear>2002</BioYear>
-          Born in Doha, Qatar.
+          <BioYear>2021</BioYear>
+          Worked on NS3 network simulations for University research projects.
         </BioSection>
         <BioSection>
           <BioYear>2023</BioYear>
           Graduated from Carnegiemellon University with a Bsc in Computer
           Science & a Concentration in Computer Systems
+          <br />
+          Full-Time Teaching Assistant @Carnegiemellon University in Qatar
         </BioSection>
         <BioSection>
           <BioYear>2024</BioYear>
-          Intern @ Openstack working alongside Nvidia & Redhat developers
+          Intern w/ Nvidia mentors @{' '}
+          <Link as={NextLink} href="/posts/working-with-openstack">
+            Openstack
+          </Link>
         </BioSection>
       </Section>
 
@@ -135,7 +141,8 @@ const Page = () => {
           I ❤️
         </Heading>
         <Paragraph>
-          I love playing amateur & watching professional tennis. Love food,
+          I love playing amateur & watching (not amateur) tennis. Love food,
+          fitness, and family.
         </Paragraph>
       </Section>
     </Box>
