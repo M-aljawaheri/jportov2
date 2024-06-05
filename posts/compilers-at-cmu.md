@@ -4,3 +4,5 @@ date: '2022-09-17'
 include_in_works: true
 works_title: 'C0++'
 ---
+
+Discussion on the 15-411 class @CMU

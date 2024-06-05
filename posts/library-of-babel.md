@@ -47,4 +47,20 @@ Surely some arrangement of 1000x1000 pixels _looks_ like that at least, no?
 If that's not crazy enough, for those who believe that life after death is capturable by the mere human eye, some right set of pixels approximate the after life.
 
 &nbsp;    
-(TODO: add the last instagram slide of this)
+Now you're probably thinking, why are we talking about this library that doesn't exist, but it's not about the library, it's about randomness and infinity. It's a realization of how astronomical exponentials are!
+
+The first library is powerful, but expectedly so. Its  contents are [uncountably infinite](https://en.wikipedia.org/wiki/Uncountable_set), as it's isomorphic to the infinite set of all strings of infinite size. What about the digital library though?
+
+&nbsp;
+By discretizing reality into pixels, and limiting the size of each frame to 1000x1000, our set is not even infinite anymore! Lets assume each pixel is a standard 32bit rgba pixel. we have (2^32)^(1000*1000) pictures. That is still _finite_, but you might say it's still clearly (beyond) astronomically large. What if we play around with this a little bit?
+
+&nbsp;
+Let's say we're settling for grayscale 8bit pictures. size? 250x250 is enough for me to tell roughly what's going on... We're still talking about 2<sup>8<sup>(250*250)</sup></sup> possibles images, as much as we've cut down that is still a lot..
+
+&nbsp;
+Now usually when people try to describe how large exponentials like this are, they talk about the heat death of the universe, or stacking papers across from the earth to the moon or imagining if every atom had a universe inside of it nested billions of times. But knowing about the library now... It makes sense doesn't it... For how can an exponential like that be computable before the heat death of the universe if cycling through the search space, every image here, would reveal the secrets of the universe before they happen! 
+
+&nbsp;
+Now this was a discussion about bruteforce and why it's infeasible, but what about probability? If you generate a random picture, in hopes it would reveal to you a guide on how to do nuclear fusion. Do you yet feel why the probability of that happening is so astronomically negligible? does this perhaps make you feel comfortable that it's astronomically unlikely that somebody mashes their keyboard randomly generating your password? Perhaps not, but it helps me sleep ~~well~~ better at night
+
+

@@ -4,3 +4,5 @@ date: '2023-01-30'
 include_in_works: true
 works_title: 'BabaOS'
 ---
+
+TODO: discussion about 15-410 @ CMU
