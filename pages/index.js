@@ -29,7 +29,7 @@ const Page = () => {
         w="100%"
         align="center"
       >
-        Hello, I'm a full-stack & systems developer based in Qatar.
+        Hello, I&apos;m a full-stack & systems developer based in Qatar.
       </Box>
 
       <Box display={{ md: 'flex' }}>
@@ -86,7 +86,12 @@ const Page = () => {
           gap={4}
           py={3}
         >
-          <NextLink href={LINKEDIN_URL} isExternal>
+          <NextLink
+            href={LINKEDIN_URL}
+            isExternal
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             <Box
               as={AiFillLinkedin}
               size="40px"
@@ -95,13 +100,23 @@ const Page = () => {
             />
           </NextLink>
 
-          <NextLink href={RESUME_PDF} passHref>
+          <NextLink
+            href={RESUME_PDF}
+            passHref
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             <Button rightIcon={<ChevronRightIcon />} colorScheme="teal">
               My Resume
             </Button>
           </NextLink>
 
-          <NextLink href={GITHUB_URL} isExternal>
+          <NextLink
+            href={GITHUB_URL}
+            isExternal
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             <Box
               as={AiFillGithub}
               size="40px"
