@@ -1,9 +1,4 @@
-import {
-  Box,
-  Text,
-  useColorModeValue,
-  Link as ChakraLink,
-} from '@chakra-ui/react'
+import { Box, Text, useColorModeValue } from '@chakra-ui/react'
 import { motion } from 'framer-motion'
 import NextLink from 'next/link'
 import Image from 'next/image'

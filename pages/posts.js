@@ -1,10 +1,4 @@
-import {
-  Box,
-  Container,
-  Heading,
-  useColorMode,
-  useColorModeValue,
-} from '@chakra-ui/react'
+import { Box, Container, Heading, useColorModeValue } from '@chakra-ui/react'
 import { motion, AnimatePresence } from 'framer-motion'
 import BlogPost from '../components/blog-post'
 import { getSortedPostsData } from '../lib/posts-util'
