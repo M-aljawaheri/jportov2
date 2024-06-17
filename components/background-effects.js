@@ -138,13 +138,46 @@ const applySeparation = boids => {
   }
 }
 
+const repopulateBoids = boids => {
+  // adjust number of birds based on canvas area
+  const canvas = document.getElementById('effectsCanvas')
+  const area = canvas.width * canvas.height
+  const numBirdsNew = Math.floor(area / 45000) // controlling density
+
+  // adjust velocity based on canvas size
+  const boidVelocity = Math.max(
+    1,
+    Math.sqrt(canvas.width * canvas.height) / 4000,
+  ) // divisor controls speed
+
+  while (boids.length > numBirdsNew) {
+    boids.pop()
+  }
+
+  while (boids.length < numBirdsNew) {
+    const group = Math.random() < 0.5 ? 1 : 2 // assign boids to either group 1 or 2
+    boids.push(
+      new Boid(
+        Math.floor(Math.random() * canvas.width),
+        Math.floor(Math.random() * canvas.height),
+        Math.random() * boidVelocity * 2 - boidVelocity,
+        Math.random() * boidVelocity * 2 - boidVelocity,
+        boidRadius,
+        defaultBiasVal,
+        group,
+      ),
+    )
+  }
+  return boids
+}
+
 const advanceBoidSimulation = boids => {
   const canvas = document.getElementById('effectsCanvas')
   for (let boid of boids) {
     boid.x += boid.velocityX
     boid.y += boid.velocityY
 
-    // Turn around at edges
+    // turn around at edges
     if (boid.x < margin) {
       boid.velocityX += turnFactor
     }
@@ -158,16 +191,16 @@ const advanceBoidSimulation = boids => {
       boid.velocityY -= turnFactor
     }
 
-    // Apply biases
+    // apply biases
     if (boid.group === 1) {
-      // Bias to right
+      // bias to right
       boid.velocityX = (1 - boid.biasval) * boid.velocityX + boid.biasval
     } else if (boid.group === 2) {
-      // Bias to left
+      // bias to left
       boid.velocityX = (1 - boid.biasval) * boid.velocityX - boid.biasval
     }
 
-    // Enforce min and max speeds
+    // enforce min and max speeds
     const speed = Math.sqrt(
       boid.velocityX * boid.velocityX + boid.velocityY * boid.velocityY,
     )
@@ -188,6 +221,8 @@ const advanceBoidSimulation = boids => {
   applyCoherence(boids)
   applyAlignment(boids)
   applySeparation(boids)
+
+  return repopulateBoids(boids)
 }
 
 const drawBoids = boids => {
@@ -209,17 +244,17 @@ const initBoids = () => {
   const area = canvas.width * canvas.height
   let boids = []
 
-  // Adjust number of birds based on canvas area
-  const numBirds = Math.min(Math.floor(area / 20000), 50) // Adjust the divisor to control density
+  // adjust number of birds based on canvas area
+  const numBirds = Math.min(Math.floor(area / 20000), 50) // controlling density
 
-  // Adjust velocity based on canvas size
+  // adjust velocity based on canvas size
   const boidVelocity = Math.max(
     1,
     Math.sqrt(canvas.width * canvas.height) / 4000,
-  ) // Adjust divisor to control speed
+  ) // divisor controls speed
 
   for (let i = 0; i < numBirds; i++) {
-    const group = Math.random() < 0.5 ? 1 : 2 // Assign boids to either group 1 or 2
+    const group = Math.random() < 0.5 ? 1 : 2 // assign boids to either group 1 or 2
     boids.push(
       new Boid(
         Math.floor(Math.random() * canvas.width),
@@ -247,7 +282,7 @@ const CanvasEffects = () => {
 
     let boids = initBoids()
     const render = () => {
-      advanceBoidSimulation(boids)
+      boids = advanceBoidSimulation(boids)
       drawBoids(boids)
       animationFrameId = requestAnimationFrame(render)
     }
