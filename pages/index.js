@@ -145,7 +145,7 @@ const Page = () => {
           <BioYear>2024</BioYear>
           Intern w/ Nvidia mentors for{' '}
           <Link as={NextLink} href="https://www.openstack.org/">
-            Openstack's
+            Openstack&apos;s
           </Link>
           <Link as={NextLink} href="https://github.com/openstack/swift">
             {' '}
