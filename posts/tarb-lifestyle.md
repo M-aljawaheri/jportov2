@@ -31,21 +31,19 @@ There's a certain irony in how tarb is created. It is wrapped in layers of its o
 
 ## ***Indulging in the gluttony***
 
-As I entered my early 20s, I started being mindful of people around me, and as such I started listening to their problems, and as most people, I started trying to help. And the naivety of the young soul makes you try to solve everyone's life at first. A friend of mine was talking to me about how some feel downright emotionally manipulative as they lay out their lives.
+As I entered my early 20s, I started being mindful of people around me, and as such I started listening to their problems, and as most people, I started trying to help. And the naivety of the young soul makes you try to solve everyone's life at first. I was talking with a friend of mine from high school that felt that some lay out their lives in a way that feels downright emotionally manipulative.
 &nbsp;  
 &nbsp;
 
-
-# revise this
-Having a conversation with your taxi driver, who seems to be in a bad marriage, in a bad economic situation, his kids hate him, not much left to do with his life, you start to struggle to find light at the end of his tunnel to give him hope, it almost depresses you as well. 
+Having a conversation with your taxi driver, who seems to be in a bad marriage, in a bad economic situation, his kids hate him, he's in debt since 1974, you start to struggle to find light at the end of his tunnel to give him hope, it almost depresses you as well. This is an exaggeration but I think we've all met people or even felt this ourselves where we we start having compound problems where it's hard to see anything that is fixable because of such a complicated depdency chain. 
 &nbsp;  
 &nbsp;
 
-My friend was arguing that a lot of the times, these people talk from these dimlit lenses to gain empathy from others, even if they feel like they see their own light and hope, but I disagree, I think they live a Tarb life style.
+My friend was beginning to feel like these people talk from these dimmly lit lenses to gain empathy from others, even if they feel like they see their own light and hope, but I disagree, I think they live a Tarb life style. Or at least, have lived it enough to reach where they are.
 &nbsp;  
 &nbsp;
 
-What I mean by the Tarb life style is that they have coccooned themselves in layers and layers of bad choices that eventually made the light beyond so dim, so dark, that no fire inside can any longer burn bright enough to see the hope around them.
+They have coccooned themselves in layers and layers of bad choices that eventually made the light beyond so dim, so dark, that no fire inside can any longer burn bright enough to see the hope around them.
 &nbsp;  
 &nbsp;
 
@@ -57,7 +55,11 @@ And that is the Tarb lifestyle. Because just like our favourite meal, there's a 
 
 
 ## ***How do I know That I'm living a Tarb lifestyle***
-The key characteristic of the Tarb lifestyle is a web of bad choices. You are supposed to be able to control your gluttony. I will not pretend that any human can be perfect (or even half as we would like to be), but we should be mindful of the things that we indulge in and be __free__ enough that we know that we could stop them to indulge in others. It's a liquid set of __choices__ that you can make. The Tarb lifestyle starts to manifest itself when you are stuck in a web of bad choices. When changing one thing seems impossible because it's stuck in the middle of other layers of bad decisions. I'll take myself as an example that I think would resonate with a lot of new bachelor university graduates.   
+The key characteristic of the Tarb lifestyle is a web of bad choices. You are supposed to be able to control your gluttony. I will not pretend that any human can be perfect or even half as perfect we would like to be. After all, every piece of kofta needs some fat. I want to emphasize that the Tarb lifestyle isn't about making choices that you regard as bad. or even questionable. We all indulge in our mistakes and sometimes these things are recurring and we accept them as part of our lives, like scrolling through reels on tiktok for an hour or two after work. Even if you regard it as a bad choice, you might accept it and it might not even affect you negatively, on the contrary it might be beneficial for sustaining your soul and enjoying yourself.
+
+&nbsp;  
+&nbsp;
+But we should be mindful of the things that we indulge in and be __free__ enough that we know that we could stop them to indulge in others. It's a liquid set of __choices__ that you can make. The Tarb lifestyle starts to manifest itself when you are stuck in a web of bad choices. When changing one thing seems impossible because it's stuck in the middle of other layers of bad decisions. I'll take myself as an example that I think would resonate with a lot of new bachelor university graduates.   
 &nbsp;  
 &nbsp;
 When I first graduated I realized that I was sleeping late, waking up even later, not getting much done at work, not being able to do the things that I like or even go out with my friends or do any of the activities or sports that I enjoy regularly. When trying to change that I realized the web of bad choices I put myself in.
