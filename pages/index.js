@@ -66,25 +66,24 @@ const Page = () => {
       </Box>
 
       <Section delay={0.1}>
-        <Heading as="h3" variant="section-title">
-          Work
+        <Heading as="h3" variant="section-title" py={2} marginBottom={2}>
+          About me
         </Heading>
         <Paragraph>
           I am a freelancer, Teaching Assistant and researcher @Carnegiemellon
           University. I have a passion for all things systems: Operating
           systems, Database systems, Compiler development and Distributed
           systems with a special affinity for{' '}
-          <Link as={NextLink} href="/posts/creating-opensource-culture">
-            open-source software
-          </Link>
-          .
+          {/*<Link as={NextLink} href="/posts/creating-opensource-culture">*/}
+          open-source software
+          {/*</Link>*/}.
         </Paragraph>
         <Box
           display="flex"
           justifyContent="center"
           alignItems="center"
           gap={4}
-          py={3}
+          py={4}
         >
           <NextLink
             href={LINKEDIN_URL}
@@ -128,7 +127,7 @@ const Page = () => {
       </Section>
 
       <Section delay={0.2}>
-        <Heading as="h3" variant="section-title">
+        <Heading as="h3" variant="section-title" py={2} marginBottom={2}>
           Bio
         </Heading>
         <BioSection>
@@ -144,16 +143,20 @@ const Page = () => {
         </BioSection>
         <BioSection>
           <BioYear>2024</BioYear>
-          Intern w/ Nvidia mentors @{' '}
-          <Link as={NextLink} href="/posts/working-with-openstack">
-            Openstack
+          Intern w/ Nvidia mentors for{' '}
+          <Link as={NextLink} href="https://www.openstack.org/">
+            Openstack's
+          </Link>
+          <Link as={NextLink} href="https://github.com/openstack/swift">
+            {' '}
+            Swift
           </Link>
         </BioSection>
       </Section>
 
       <Section delay={0.3}>
-        <Heading as="h3" variant="section-title">
-          I ❤️
+        <Heading as="h3" variant="section-title" py={2} marginBottom={2}>
+          ❤️
         </Heading>
         <Paragraph>
           I love playing amateur & watching (not amateur) tennis. Love food,

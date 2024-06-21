@@ -28,7 +28,7 @@ class Boid {
 const boidRadius = 5
 
 const turnFactor = 0.5
-const visualRange = 75
+const visualRange = 55
 const protectedRange = 15
 const centeringFactor = 0.00005
 const avoidFactor = 0.09
